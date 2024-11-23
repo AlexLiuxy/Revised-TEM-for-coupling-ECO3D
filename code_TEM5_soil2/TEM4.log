@@ -1,0 +1,303 @@
+
+Please enter the lable of subdirectory you want to start with the simulations? 
+part-392/
+
+Do you want to run the model only for steady state conditions ? 
+ Enter 0 for transient simulation
+ Enter 1 for steady state simulation
+equil = 0
+
+Do you want to start the transient with a spin up period? 
+Enter 0 for no:
+Enter 1 for yes: 
+spinflag = 1
+
+How many spins do you want in the spin up period? 
+numspin = 10
+
+How many years per spin? 
+spintime = 40
+
+Do you want to output the spin up tem data? 1: yes/0: no  0
+totsptime = 400
+
+
+How many years do you run for transient simulations ? 
+transtime = 139
+
+RTIME = 540
+
+
+Do you want to run the SOIL THERMAL MODEL (STM) model for soil temperatures?
+  Enter 0 for No
+  Enter 1 for Yes
+ stmflg = 1
+
+Enter name of the snow (.ECD) data file with the parameter values:QTSP44A2.ECD
+
+Enter name of soil layer (.ECD) data file with parameter values:QTLA44A2.ECD
+
+Enter name of the soil temperature initial (.ECD) data file with the parameter values:QTST44A2.ECD
+
+
+Do you want to run the POTSCLM model for solar radiation variables?
+  Enter 0 for No
+  Enter 1 for Yes
+ atmsflag = 1
+
+Do you have spatially explicit solar radiation data or cloudiness data?:
+Enter 0 for solar radiation data (W/ sq. m):
+Enter 1 for cloudiness data (percent cloudiness): 
+cldflag = 1
+
+Do you have transient cloudiness data?:
+Enter 0 for no:
+Enter 1 for yes: 
+telmnt[0].clm.tcldsflag = 1
+
+Please enter the name of the file containing the mean monthly cloudiness data: 
+               (e.g., CLDS.GIS) 
+clds1891-2030.tem
+
+How do you locate your grid cells?
+Enter 0 for column/row:
+Enter 1 for longitude/latitude: 1
+
+
+Do you wish output data from the irradiance model? 
+  Enter 0 for no
+  Enter 1 for yes: 
+atmsoutfg = 0
+
+
+Do you want to run the terrestrial ecosystem model (TEM)?
+  Enter 0 for No
+  Enter 1 for Yes
+temflag = 1
+
+
+Do you want to allow available N to fluctuate?
+  Enter 0 for No
+  Enter 1 for Yes: 
+avlnflag = 1
+
+
+Do you want nitrogen feedback on GPP?
+  Enter 0 for No
+  Enter 1 for Yes: 
+nfeed = 1
+
+
+Do you want to solve for baseline soil nitrogen?
+  Enter 0 for No
+  Enter 1 for Yes: 
+baseline = 1
+
+
+Do you want to run the model with moisture limitation?
+  Enter 0 for No
+  Enter 1 for Yes: 
+moistlim = 1
+
+
+How many years do you want to wait before checking equilibrium conditions? 
+strteq = 10
+
+
+Enter the maximum number of years for the model to run: 
+maxyears = 3000
+
+
+Enter the maximum number of attempts to reach a solution: 
+maxnrun = 3
+
+
+What absolute tolerance do you want to use for checking equilibrium
+of the water cycle? wtol = 0.01
+
+
+What absolute tolerance do you want to use for checking equilibrium
+of the carbon cycle?
+ctol = 1
+
+
+What absolute tolerance do you want to use for checking equilibrium
+of the nitrogen cycle?
+ntol = 0.02
+
+
+
+What year do you want to start collecting output data? startyr = 1891
+
+
+What year do you want to stop collecting output data? endyr = 2030
+How often (x years) should data be collected after the initial year? diffyr = 1
+
+Enter the proportional tolerance for the integrator: 0.01
+Enter the maximum number of iterations in the integrator: 20
+Enter the maximum number of times in a month that the
+integrator can reach the maximum number of iterations: 100
+Enter name of the soil (.ECD) data file with parameter values: Tsoil423.ecd
+Enter name of the data file containing the rooting depths:
+               (e.g., ROOTZVEG.ECD)
+Trotz423.ecd
+Enter name of the file with the vegetation parameter values (.ECD):Tveg423.ecd
+
+Enter name of the file with leaf parameter values (.ECD):Tleaf423.ecd
+
+Enter name of the file with microbe parameter values (.ECD)
+dependent upon vegetation: Tmcrv423.ecd
+
+
+
+Please enter the number of community types with calibration data:12
+Enter name of the site (.ECD) data file with the parameter values cmnt
+1: ice423.dat
+2: tpd42301_10cm.dat
+3: tmt42301_10cm.dat
+4: 4.dat
+5: 5.dat
+6: 6.dat
+7: pwn42301_10cm.dat
+8: cur42301_10cm.dat
+9: duc42301_10cm.dat
+10: gua42301_10cm.dat
+11: tai42301_10cm.dat
+12: 12.dat
+
+
+Enter name of the file prescribing vegetation mosaics (.ECD):
+Tcomm423.ecd
+
+Please enter the name of the file containing the soil texture data:
+               (e.g., TEXTURE.GIS) 
+clfaotxt.glb
+
+Please enter the name of the file containing the vegetation data: 
+               (e.g., TEMVEG.GIS) 
+cltveg.glb
+
+Please enter the name of the file containing the elevation data: 
+               (e.g., ELEV.GIS) 
+clelev.glb
+
+
+Do you have transient air temperature data?:
+Enter 0 for No:
+Enter 1 for Yes: 
+telmnt[0].tem.atms.ttairflag = 1
+
+Please enter the name of the file containing the mean monthly air temperature data: 
+               (e.g., TAIR.GIS) 
+tair1891-2030.tem
+
+
+Do you have transient precipitation data?:
+Enter 0 for No:
+Enter 1 for Yes: 
+temnt[0].tem.atms.tprecflag = 1
+
+Please enter the name of the file containing the monthly precipitation data: 
+               (e.g., PREC.GIS) 
+prec1891-2030.tem
+
+
+
+Enter the initial concentration of carbon dioxide in ppmv: 293.86
+
+
+
+Enter the final equilibrium concentration of carbon dioxide in ppmv: 293.86
+
+Do you have transient CO2 data?:
+Enter 0 for No:
+Enter 1 for Yes: 
+telmnt[0].tem.atms.tco2flag = 1
+
+
+
+Enter the name of the file containing the CO2 data: co21891-2030.data
+
+Enter the factor for changing C:N per ppmv of enhanced CO2:
+                     (Enter 0.0 for no change): 
+telmnt[0].tem.veg.dc2n = 0.000519
+
+Do you have transient land use data?:
+Enter 0 for No:
+Enter 1 for Yes: telmnt[0].tem.ag.tlulcflag = 0
+
+Do you want to use spatially explicit values of Kd?
+Enter 0 for No:
+Enter 1 for Yes: 
+kdinflg = 0
+
+
+Do you want to generate spatially explicit values of Kd?
+Enter 0 for No:
+Enter 1 for Yes: 
+kdoutflg = 0
+
+
+
+           POSSIBLE OUTPUT VARIABLES:
+
+VEGC SOILORGC TOTALC VEGN VSTRUCTN 
+VSTOREN SOILORGN AVAILN AGPRODC AGFPRODN 
+PROD10C PROD10N PROD100C PROD100N TOTPRODC 
+TOTPRODN TOTEC TOTGC AVAILH2O RGRNDH2O 
+SNOWPACK SGRNDH2O SOILH2O PCTP VSM 
+VEGINGPP GPP VEGINNPP NPP GPR 
+RVMAINT RVGRWTH LTRC RH NEP 
+NINPUT VEGINNUP VEGNUP VEGSUP VEGLUP 
+VNMOBIL VNRESORB LTRN MICRONUP NETNMIN 
+NLOST RAIN RPERC RRUN SNOWFALL 
+SNOWINF SPERC SRUN PET EET 
+H2OYIELD TSOIL DST5 DST10 DST20 
+DST50 DST100 DST200 FRONTD THAWBE 
+THAWEND UNRMLEAF LEAF FPC LAI 
+CONVERTC CONVERTN SCONVRTC SCONVRTN NVRETENT 
+NSRETENT NRETENT SLASHC SLASHN PRDF10C 
+PRDF10N PRDF100C PRDF100N AGNPPC AGNPPN 
+AGFPRODC  AGLTRFC AGLTRFN AGFERTN 
+TOTFPRDC TOTFPRDN AGPRODFC AGPRODFN PRD10FC 
+PRD10FN PRD100FC PRD100FN TOTPRDFC TOTPRDFN 
+TOTNPP CFLUX   {®Gáz„? 
+
+
+How many variables are to be mapped (max 106) in output files?3
+
+Please enter output variable: 
+1 NPP
+2 LAI
+3 GPP
+Enter the name of the OUTPUT file to contain NPP:  NPP.out
+Enter the name of the OUTPUT file to contain LAI:  LAI.out
+Enter the name of the OUTPUT file to contain GPP:  GPP.out
+
+Do you want to use spatially explicit data for intial conditions? 
+  Enter 1 for YES:
+  Enter 0 for NO:
+  NOTE:  If YES, you will need spatially explicit data for VEGC,
+         STRUCTN, SOLC, SOLN, AVLN, NSTORE, AVAILH2O, RGRNDH2O,
+         SNOWPACK, SGRNDH2O, UNNORMLEAF, PET, EET,(i.e. 13 data files)
+stateflag = 0
+
+
+
+For how many grid cells would you like a timestamp?
+After 'x' number of grid cells
+Enter 0 for no timestamp): 62483
+
+
+Do you want to start at the beginning of the GIS files?
+  Enter 1 for YES
+  Enter 0 for NO: 1
+
+
+
+
+Do you want to finish at the end of the GIS files?
+  Enter 1 for YES
+  Enter 0 for NO: 1
+
+
